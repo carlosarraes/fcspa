@@ -20,7 +20,7 @@ const GetCoins = () => {
   })
 
   const fetchCoins = async () => {
-    const data = await fetch('https://gofa-4wgfen3n5q-rj.a.run.app/getcoins/')
+    const data = await fetch('https://gohst-4wgfen3n5q-rj.a.run.app/getcoins/')
     const response = await data.json()
 
     return response
