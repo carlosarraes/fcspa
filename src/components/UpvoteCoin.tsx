@@ -8,13 +8,11 @@ const UpvoteCoin = () => {
       <div className="flex flex-col gap-2 p-2 w-1/2 text-left">
         <div className="flex gap-4 text-left">
           <h2 className="text-xl p-2 bg-gray-700 text-yellow-300 rounded-lg">PATCH</h2>
-          <p className="text-sm self-center">
-            https://gosrv-4wgfen3n5q-rj.a.run.app/upvote/:symbol
-          </p>
+          <p className="text-sm self-center">https://gofa-4wgfen3n5q-rj.a.run.app/upvote/:symbol</p>
         </div>
         <p>
-          Updates on the database favorite value to true. You can use the previous command to check
-          that it went through :)
+          Updates on the database, increments the upvotes by one. You can use the previous command
+          to check that it went through :)
         </p>
         <hr />
         <p>Pattern(Same pattern, only status code change.):</p>
@@ -34,7 +32,7 @@ const UpvoteCoin = () => {
           my research, mux would help a lot :(
         </p>
         <p>You can still upvote if you access the endpoint through Postman/Insomnia</p>
-        <a href="https://gosrv-4wgfen3n5q-rj.a.run.app/upvote/KLV" className="text-blue-400">
+        <a href="https://gofa-4wgfen3n5q-rj.a.run.app/upvote/KLV" className="text-blue-400">
           /upvote/KLV
         </a>
         <p className="text-red-400">^ you will get an method not allowed ;)</p>

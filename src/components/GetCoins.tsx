@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 interface Pattern {
   id?: string
-  favorite?: string
+  upvotes?: string
   name?: string
   symbol?: string
   price?: string
@@ -13,14 +13,14 @@ const GetCoins = () => {
   const [coins, setCoins] = useState([])
   const [pattern, setPattern] = useState<Pattern>({
     id: 'int',
-    favorite: 'boolean',
+    upvotes: 'int',
     name: 'string',
     symbol: 'string',
     price: 'float',
   })
 
   const fetchCoins = async () => {
-    const data = await fetch('https://gosrvcf-4wgfen3n5q-rj.a.run.app/getcoins/')
+    const data = await fetch('https://gofa-4wgfen3n5q-rj.a.run.app/getcoins/')
     const response = await data.json()
 
     return response
@@ -37,7 +37,7 @@ const GetCoins = () => {
     if (innerText === 'Status 200') {
       setPattern({
         id: 'int',
-        favorite: 'boolean',
+        upvotes: 'int',
         name: 'string',
         symbol: 'string',
         price: 'float',
@@ -54,7 +54,7 @@ const GetCoins = () => {
       <div className="flex flex-col w-1/2 gap-2 p-2 text-left">
         <div className="flex gap-4 text-left">
           <h2 className="text-xl p-2 bg-gray-700 text-green-300 rounded-lg">GET</h2>
-          <p className="text-sm self-center">https://gosrv-4wgfen3n5q-rj.a.run.app/getcoins</p>
+          <p className="text-sm self-center">https://gofa-4wgfen3n5q-rj.a.run.app/getcoins/</p>
         </div>
         <button
           type="button"

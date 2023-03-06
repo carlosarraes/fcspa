@@ -5,7 +5,7 @@ const CheckHealth = () => {
   const [pattern, setPattern] = useState('Running! :)')
 
   const fetchCoins = async () => {
-    const data = await fetch('https://gosrvcf-4wgfen3n5q-rj.a.run.app/')
+    const data = await fetch('https://gofa-4wgfen3n5q-rj.a.run.app/')
 
     return data
   }
@@ -34,7 +34,7 @@ const CheckHealth = () => {
       <div className="flex flex-col w-1/2 gap-2 p-2 text-left">
         <div className="flex gap-4 text-left">
           <h2 className="text-xl p-2 bg-gray-700 text-green-300 rounded-lg">GET</h2>
-          <p className="text-sm self-center">https://gosrv-4wgfen3n5q-rj.a.run.app/</p>
+          <p className="text-sm self-center">https://gofa-4wgfen3n5q-rj.a.run.app/</p>
         </div>
         <button
           type="button"
