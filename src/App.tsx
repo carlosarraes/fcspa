@@ -1,4 +1,5 @@
 import CheckHealth from './components/CheckHealth'
+import Footer from './components/Footer'
 import GetCoins from './components/GetCoins'
 import Header from './components/Header'
 import UpvoteCoin from './components/UpvoteCoin'
@@ -10,6 +11,7 @@ function App() {
       <GetCoins />
       <CheckHealth />
       <UpvoteCoin />
+      <Footer />
     </main>
   )
 }
