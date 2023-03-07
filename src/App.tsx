@@ -8,9 +8,11 @@ function App() {
   return (
     <main className="flex flex-col mx-auto justify-center items-center w-full bg-gray-800 text-white">
       <Header />
-      <GetCoins />
-      <CheckHealth />
-      <UpvoteCoin />
+      <section className="flex flex-row sm:flex-col flex-wrap justify-center items-center">
+        <GetCoins />
+        <CheckHealth />
+        <UpvoteCoin />
+      </section>
       <Footer />
     </main>
   )

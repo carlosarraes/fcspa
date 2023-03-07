@@ -22,7 +22,7 @@ const CheckHealth = () => {
 
   const handleShow = (e: React.MouseEvent<HTMLParagraphElement, MouseEvent>) => {
     const { innerText } = e.currentTarget
-    if (innerText === 'Status 200') {
+    if (innerText === '200') {
       setPattern('Running! :)')
     } else {
       setPattern('Method not allowed')
@@ -48,10 +48,18 @@ const CheckHealth = () => {
         <p>Pattern(click to change):</p>
         <div className="flex gap-4 text-left my-1">
           <span className="self-center">Status: </span>
-          <p className="text-white px-2 py-1 bg-green-600 font-bold rounded-sm cursor-pointer">
+          <p
+            className="text-white px-2 py-1 bg-green-600 font-bold rounded-sm cursor-pointer"
+            onClick={handleShow}
+          >
             200
           </p>
-          <p className="text-white px-2 py-1 bg-red-400 font-bold rounded-sm cursor-pointer">405</p>
+          <p
+            className="text-white px-2 py-1 bg-red-400 font-bold rounded-sm cursor-pointer"
+            onClick={handleShow}
+          >
+            405
+          </p>
         </div>
         <p>Response - Text:</p>
         <pre className="text-left">{JSON.stringify(pattern, null, 2)}</pre>
