@@ -30,10 +30,10 @@ const UpvoteCoin = () => {
   }
 
   return (
-    <section className="flex p-2 justify-center items-center h-96 gap-2 w-8/12 mt-8 shadow-2xl mb-8">
-      <div className="flex flex-col gap-2 p-2 w-1/2 text-left">
+    <section className="flex flex-col sm:flex-row w-full sm:w-8/12 p-1 justify-center items-center gap-2 mt-8 shadow-2xl mb-8">
+      <div className="flex flex-col gap-2 p-2 w-full sm:w-1/2 text-left">
         <div className="flex gap-4 text-left">
-          <h2 className="text-xl p-2 bg-gray-700 text-yellow-300 rounded-lg">PATCH</h2>
+          <h2 className="text-xl p-2 bg-gray-700 text-yellow-300 self-center rounded-lg">PATCH</h2>
           <p className="text-sm self-center">
             https://gohst-4wgfen3n5q-rj.a.run.app/upvote/:symbol
           </p>
@@ -59,15 +59,19 @@ const UpvoteCoin = () => {
         </p>
         <hr />
         <p>Possible to upvote: KLV, BTC, ETH, ENJ, BNB, LTC, APE, LINK, DOGE, TRX.</p>
-        <p>Pattern(Same pattern, only status code change.):</p>
-        <div className="flex gap-4 text-left">
-          <p className="text-green-400 cursor-pointer">Status 200</p>
-          <p className="text-red-400 cursor-pointer">Status 404</p>
-          <p className="text-red-400 cursor-pointer">Status 405</p>
+        <p>Pattern(Same pattern, only the status code changes.):</p>
+        <div className="flex gap-4 text-left my-1">
+          <span className="self-center">Status: </span>
+          <p className="text-white px-2 py-1 bg-green-600 font-bold rounded-sm cursor-pointer">
+            200
+          </p>
+          <p className="text-white px-2 py-1 bg-red-400 font-bold rounded-sm cursor-pointer">404</p>
+          <p className="text-white px-2 py-1 bg-red-400 font-bold rounded-sm cursor-pointer">405</p>
         </div>
+        <p>Response - JSON:</p>
         <pre className="text-left">{JSON.stringify(pattern, null, 2)}</pre>
       </div>
-      <div className="flex flex-col gap-2 w-1/2">
+      <div className="flex flex-col gap-2 w-full sm:w-1/2">
         <pre className="bg-gray-900 text-white p-2 rounded-lg w-full h-80 max-h-80 overflow-y-auto shadow-lg">
           {coins.message === '' ? 'Click the button :)' : JSON.stringify(coins, null, 2)}
         </pre>
